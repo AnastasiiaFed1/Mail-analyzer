@@ -1,0 +1,12 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,thunderbird,heavy,6,0.0,0.0,713.59,247,465020.7,0
+5.7,thunderbird,heavy,6,9.1,14.8,727.73,249,69088.9,0
+11.5,thunderbird,heavy,6,10.6,13.8,726.23,249,51380.2,0
+16.8,thunderbird,heavy,6,7.4,13.7,727.18,249,49023.3,0
+22.5,thunderbird,heavy,6,8.4,14.1,716.64,249,52099.8,0
+28.2,thunderbird,heavy,6,9.2,13.8,731.04,246,50141.6,0
+33.8,thunderbird,heavy,6,7.6,13.7,719.07,245,49431.3,0
+39.5,thunderbird,heavy,6,12.5,20.0,731.23,243,51687.4,0
+45.2,thunderbird,heavy,6,13.9,17.3,731.88,243,62565.9,0
+50.5,thunderbird,heavy,6,8.6,13.9,718.19,243,51565.2,0
+56.1,thunderbird,heavy,6,8.6,13.6,730.89,245,50091.9,0

@@ -1,0 +1,13 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,gmail_chrome,idle,85,0.0,0.0,3583.15,2214,260430.6,0
+5.6,gmail_chrome,idle,84,9.0,14.7,3517.26,2186,53881.6,0
+10.6,gmail_chrome,idle,84,5.4,11.3,3514.11,2186,46971.6,0
+16.1,gmail_chrome,idle,85,10.3,16.1,3578.48,2206,61840.6,0
+21.3,gmail_chrome,idle,85,6.7,13.5,3575.11,2170,50258.9,0
+26.5,gmail_chrome,idle,85,6.4,12.7,3574.59,2207,48844.8,0
+31.7,gmail_chrome,idle,85,6.6,13.8,3574.52,2207,52787.9,0
+36.7,gmail_chrome,idle,85,6.7,14.0,3583.36,2207,48543.0,0
+41.8,gmail_chrome,idle,85,8.0,13.5,3601.48,2221,48584.0,0
+46.8,gmail_chrome,idle,85,7.3,13.0,3590.45,2221,48450.5,0
+52.1,gmail_chrome,idle,85,7.7,12.6,3586.69,2218,48051.9,0
+57.2,gmail_chrome,idle,85,5.5,12.5,3585.62,2221,46666.3,0

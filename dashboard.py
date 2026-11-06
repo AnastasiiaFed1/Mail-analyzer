@@ -35,7 +35,7 @@ def load_all_metrics(data_dir="data"):
             st.warning(f"Не вдалося прочитати файл {filepath}: {e}")
 
     if df_list:
-        return pd.concat(df_list, ignore_ignore_index=False if False else True)
+        return pd.concat(df_list, ignore_index=True)
     return pd.DataFrame()
 
 

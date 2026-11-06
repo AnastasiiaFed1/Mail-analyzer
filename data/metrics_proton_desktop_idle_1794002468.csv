@@ -1,0 +1,12 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,proton_desktop,idle,8,0.0,0.0,1234.58,263,54787.7,0
+6.1,proton_desktop,idle,8,7.4,14.9,1234.83,263,56573.6,0
+11.6,proton_desktop,idle,8,5.0,11.4,1233.94,263,30971.6,0
+18.6,proton_desktop,idle,8,8.1,16.8,1233.29,263,37139.7,0
+24.1,proton_desktop,idle,8,6.6,13.6,1233.68,264,43208.4,0
+29.7,proton_desktop,idle,8,6.7,12.0,1234.34,264,41526.4,0
+35.0,proton_desktop,idle,8,5.0,12.4,1234.11,264,44518.6,0
+40.5,proton_desktop,idle,8,5.3,12.2,1234.09,264,40060.8,0
+46.1,proton_desktop,idle,8,8.9,16.1,1234.27,264,44182.5,0
+51.5,proton_desktop,idle,8,4.9,12.5,1233.67,264,42990.0,0
+56.9,proton_desktop,idle,8,5.1,12.2,1233.69,264,39553.2,0

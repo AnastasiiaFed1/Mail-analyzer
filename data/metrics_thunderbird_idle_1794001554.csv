@@ -1,0 +1,13 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,thunderbird,idle,6,0.0,0.0,696.49,263,303202.7,0
+5.5,thunderbird,idle,6,7.2,13.3,696.48,263,42594.3,0
+10.8,thunderbird,idle,6,5.1,13.6,712.1,261,44195.8,0
+16.6,thunderbird,idle,6,10.3,16.1,725.04,264,52435.5,0
+21.9,thunderbird,idle,6,6.9,13.1,711.42,263,44608.2,0
+27.3,thunderbird,idle,6,8.8,13.6,707.29,263,44246.4,0
+32.6,thunderbird,idle,6,6.9,12.2,714.12,263,44531.7,0
+37.8,thunderbird,idle,6,6.3,13.2,713.5,263,45932.6,0
+43.4,thunderbird,idle,6,8.1,14.2,708.71,254,50808.8,0
+48.9,thunderbird,idle,6,6.3,12.7,708.71,254,43241.8,0
+54.2,thunderbird,idle,6,6.1,12.9,708.71,254,45461.3,0
+59.7,thunderbird,idle,6,7.4,12.7,708.71,254,58162.1,0

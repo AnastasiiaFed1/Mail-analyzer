@@ -1,0 +1,12 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,proton_desktop,medium,8,0.0,0.0,1235.57,259,414171.1,0
+5.6,proton_desktop,medium,8,9.5,14.4,1238.36,259,47658.6,0
+11.1,proton_desktop,medium,8,9.4,13.0,1239.13,259,46377.5,0
+16.5,proton_desktop,medium,8,8.0,12.7,1241.78,259,45745.4,0
+22.0,proton_desktop,medium,8,7.6,11.9,1244.14,259,43623.2,0
+27.5,proton_desktop,medium,8,7.1,12.5,1243.88,259,45688.0,0
+32.9,proton_desktop,medium,8,5.4,12.7,1242.97,260,42139.5,0
+38.9,proton_desktop,medium,8,8.6,15.7,1246.58,260,47891.5,0
+44.9,proton_desktop,medium,8,7.1,14.8,1250.77,260,39707.2,0
+50.3,proton_desktop,medium,8,7.3,12.0,1248.43,260,46977.1,0
+55.8,proton_desktop,medium,8,6.4,13.1,1249.6,260,43519.4,0

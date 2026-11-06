@@ -6,8 +6,8 @@ import psutil
 # 1. Словник процесів для дослідження (список .exe файлів)
 PROCESS_MAP = {
     "thunderbird": ["thunderbird.exe"],
-    "proton_desktop": ["proton-mail.exe", "protonmail.exe"],
-    "gmail_chrome": ["chrome.exe"],
+    "proton_desktop": ["proton-mail.exe", "protonmail.exe", "proton mail.exe", "proton.exe"],
+    "gmail_chrome": ["chrome.exe", "msedge.exe", "googlechrome.exe"],
     "outlook_new": ["ms-outlook.exe", "olk.exe"],
     "proton_web": ["chrome.exe", "msedge.exe"],
 }
