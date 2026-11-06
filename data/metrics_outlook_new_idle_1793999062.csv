@@ -1,0 +1,13 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,outlook_new,idle,0,0.0,0.0,0.0,0,255482.6,0
+5.2,outlook_new,idle,0,18.1,18.0,0.0,0,32305.2,0
+10.7,outlook_new,idle,0,20.9,21.2,0.0,0,34968.5,0
+16.0,outlook_new,idle,0,25.0,18.7,0.0,0,34321.2,0
+21.3,outlook_new,idle,0,18.0,15.9,0.0,0,45113.9,0
+26.7,outlook_new,idle,0,20.2,18.5,0.0,0,30411.8,0
+31.8,outlook_new,idle,0,15.0,15.4,0.0,0,27860.2,0
+37.4,outlook_new,idle,0,19.4,20.4,0.0,0,31529.6,0
+42.6,outlook_new,idle,0,17.0,16.0,0.0,0,28683.9,0
+47.9,outlook_new,idle,0,18.6,17.2,0.0,0,30237.4,0
+53.3,outlook_new,idle,0,21.3,20.5,0.0,0,45301.7,0
+58.7,outlook_new,idle,0,21.7,19.7,0.0,0,43779.6,0

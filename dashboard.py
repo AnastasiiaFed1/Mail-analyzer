@@ -7,7 +7,7 @@ import plotly.express as px
 # 1. Конфігурація сторінки Streamlit
 st.set_page_config(
     page_title="Mail Analyzer Dashboard",
-    page_icon="📊",
+    
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -35,12 +35,12 @@ def load_all_metrics(data_dir="data"):
             st.warning(f"Не вдалося прочитати файл {filepath}: {e}")
 
     if df_list:
-        return pd.concat(df_list, ignore_ignore_index=False if False else True)
+        return pd.concat(df_list, ignore_index=True)
     return pd.DataFrame()
 
 
 # 3. Головна панель та заголовок
-st.title("📊 Mail Analyzer — Інтерактивний дашборд метрик ОС")
+st.title("Mail Analyzer — Інтерактивний дашборд метрик ОС")
 st.markdown(
     """
     Даний дашборд дозволяє аналізувати системне навантаження (RAM, CPU, системні потоки та перемикання контексту) 
@@ -53,7 +53,7 @@ df = load_all_metrics()
 
 # Перевірка наявності даних
 if df.empty:
-    st.error("⚠️ У папці `data/` не знайдено жодного CSV-файлу з метриками!")
+    st.error(" У папці `data/` не знайдено жодного CSV-файлу з метриками!")
     st.info(
         """
         **Як виправити:**
@@ -62,13 +62,13 @@ if df.empty:
         3. Натисніть кнопку **Оновити дані** нижче.
         """
     )
-    if st.button("🔄 Оновити дані"):
+    if st.button(" Оновити дані"):
         st.rerun()
     st.stop()
 
 
 # 4. Бічна панель (Sidebar) з фільтрами
-st.sidebar.header("⚙️ Фільтри аналізу")
+st.sidebar.header(" Фільтри аналізу")
 
 # Фільтр поштових клієнтів
 available_apps = sorted(df["app_key"].unique().tolist())
@@ -87,7 +87,7 @@ selected_scenarios = st.sidebar.multiselect(
 )
 
 # Кнопка ручного оновлення
-if st.sidebar.button("🔄 Оновити дані з `data/`"):
+if st.sidebar.button(" Оновити дані з `data/`"):
     st.cache_data.clear()
     st.rerun()
 
@@ -98,19 +98,19 @@ filtered_df = df[
 ]
 
 if filtered_df.empty:
-    st.warning("⚠️ Немає даних, що відповідають обраним фільтрам. Змініть налаштування у бічному меню.")
+    st.warning(" Немає даних, що відповідають обраним фільтрам. Змініть налаштування у бічному меню.")
     st.stop()
 
 
 # 5. Ключові показники (KPI Cards)
-st.subheader("📌 Загальні показники за обраними фільтрами")
+st.subheader(" Загальні показники за обраними фільтрами")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     avg_ram = filtered_df["working_set_ram_mb"].mean()
     max_ram = filtered_df["working_set_ram_mb"].max()
     st.metric(
-        label="🧠 RAM (Working Set)",
+        label=" RAM (Working Set)",
         value=f"{avg_ram:.1f} МБ",
         delta=f"Макс: {max_ram:.1f} МБ"
     )
@@ -119,7 +119,7 @@ with col2:
     avg_cpu = filtered_df["user_cpu_percent"].mean()
     max_cpu = filtered_df["user_cpu_percent"].max()
     st.metric(
-        label="⚡ CPU User Usage",
+        label=" CPU User Usage",
         value=f"{avg_cpu:.1f} %",
         delta=f"Макс: {max_cpu:.1f} %"
     )
@@ -128,7 +128,7 @@ with col3:
     avg_threads = filtered_df["threads_count"].mean()
     max_threads = filtered_df["threads_count"].max()
     st.metric(
-        label="🧵 Кількість потоків",
+        label=" Кількість потоків",
         value=f"{avg_threads:.0f}",
         delta=f"Макс: {max_threads:.0f}"
     )
@@ -137,7 +137,7 @@ with col4:
     avg_ctx = filtered_df["ctx_switches_sec"].mean()
     max_ctx = filtered_df["ctx_switches_sec"].max()
     st.metric(
-        label="🔄 Context Switches / sec",
+        label=" Context Switches / sec",
         value=f"{avg_ctx:.1f}",
         delta=f"Макс: {max_ctx:.1f}"
     )
@@ -147,7 +147,7 @@ st.markdown("---")
 
 # 6. Вкладки з графіками та таблицями
 tab_charts, tab_timeline, tab_summary, tab_raw = st.tabs(
-    ["📊 Порівняльні діаграми", "📈 Динаміка у часі", "📋 Зводна таблиця", "📑 Сирі дані (CSV)"]
+    [" Порівняльні діаграми", " Динаміка у часі", " Зводна таблиця", " Сирі дані (CSV)"]
 )
 
 # --- Вкладка 1: Порівняльні діаграми ---
@@ -249,7 +249,7 @@ with tab_timeline:
 
 # --- Вкладка 3: Зводна таблиця ---
 with tab_summary:
-    st.subheader("📋 Зводна статистика метрик за клієнтами та сценаріями")
+    st.subheader(" Зводна статистика метрик за клієнтами та сценаріями")
     
     summary_df = filtered_df.groupby(["app_key", "scenario"]).agg(
         RAM_Mean_MB=("working_set_ram_mb", "mean"),
@@ -266,7 +266,7 @@ with tab_summary:
     # Скачування таблиці у CSV
     csv_data = summary_df.to_csv(index=False).encode("utf-8")
     st.download_button(
-        label="📥 Завантажити зводну таблицю (CSV)",
+        label=" Завантажити зводну таблицю (CSV)",
         data=csv_data,
         file_name="summary_metrics_report.csv",
         mime="text/csv"
@@ -275,5 +275,5 @@ with tab_summary:
 
 # --- Вкладка 4: Сирі дані ---
 with tab_raw:
-    st.subheader("📑 Усі виміряні записи з файлів")
+    st.subheader(" Усі виміряні записи з файлів")
     st.dataframe(filtered_df, use_container_width=True)
