@@ -1,0 +1,10 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,gmail_chrome,heavy,29,0.0,0.0,3080.5,812,551796.9,0
+8.0,gmail_chrome,heavy,29,26.6,22.2,3071.96,812,47422.9,0
+13.1,gmail_chrome,heavy,29,17.0,17.5,3034.4,812,28930.7,0
+18.3,gmail_chrome,heavy,29,24.4,20.2,3043.63,812,44116.3,0
+26.2,gmail_chrome,heavy,29,21.1,18.8,3036.79,809,31961.9,0
+33.9,gmail_chrome,heavy,29,21.2,22.4,3037.96,800,50205.0,0
+42.0,gmail_chrome,heavy,29,19.5,19.6,3027.13,787,35481.7,0
+49.6,gmail_chrome,heavy,29,18.2,17.3,3023.91,787,28967.0,0
+57.5,gmail_chrome,heavy,29,20.4,21.2,3022.61,787,35291.7,0

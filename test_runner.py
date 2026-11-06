@@ -10,7 +10,11 @@ pyautogui.PAUSE = 0.3
 
 def run_scenario_actions(scenario: str, duration_sec: int):
     """Виконує автоклікерні дії мишею та клавіатурою в залежності від сценарію."""
+<<<<<<< HEAD
     print(f"Стартує емуляція сценарію: '{scenario}' на {duration_sec} секунд...")
+=======
+    print(f"[ PyAutoGUI] Стартує емуляція сценарію: '{scenario}' на {duration_sec} секунд...")
+>>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
     
     # Очікуємо пару секунд, щоб користувач встиг активувати вікно поштовика
     time.sleep(2)
@@ -55,7 +59,11 @@ def run_scenario_actions(scenario: str, duration_sec: int):
             pyautogui.press("esc")  # Скинути пошук
             time.sleep(1.0)
 
+<<<<<<< HEAD
     print(f"Емуляцію сценарію '{scenario}' завершено.")
+=======
+    print(f"[ PyAutoGUI] Емуляцію сценарію '{scenario}' завершено.")
+>>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
 
 
 def start_test(app_key: str, scenario: str, duration_sec: int = 60):
@@ -84,7 +92,11 @@ def start_test(app_key: str, scenario: str, duration_sec: int = 60):
     )
 
     print("\n=======================================================")
+<<<<<<< HEAD
     print(f" Старт тесту: {app_key.upper()} | Сценарій: {scenario.upper()}")
+=======
+    print(f"[ TEST RUNNER] Старт тесту: {app_key.upper()} | Сценарій: {scenario.upper()}")
+>>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
     print("Увага! Переключіться на вікно поштового клієнта зараз!")
     print("Початок автокліків через 5 секунд...")
     print("=======================================================\n")
@@ -101,7 +113,11 @@ def start_test(app_key: str, scenario: str, duration_sec: int = 60):
     monitor_thread.join()
     action_thread.join()
 
+<<<<<<< HEAD
     print("\nТестування успішно завершено! Дані збережено у папку 'data/'.")
+=======
+    print("\n Тестування успішно завершено! Дані збережено у папку 'data/'.")
+>>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
 
 
 if __name__ == "__main__":

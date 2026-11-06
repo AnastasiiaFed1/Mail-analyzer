@@ -1,0 +1,9 @@
+rel_time_sec,app_key,scenario,process_count,user_cpu_percent,kernel_cpu_percent,working_set_ram_mb,threads_count,ctx_switches_sec,page_faults_total
+0.0,proton_web,heavy,57,0.0,0.0,4721.12,1734,82026.8,0
+5.0,proton_web,heavy,57,20.6,19.0,4721.66,1734,43068.9,0
+11.5,proton_web,heavy,57,22.3,19.8,4727.85,1732,47080.1,0
+20.3,proton_web,heavy,57,22.8,24.1,4741.19,1732,49727.6,0
+28.3,proton_web,heavy,57,20.2,19.9,4768.27,1702,33097.7,0
+36.5,proton_web,heavy,57,22.0,20.7,4763.42,1701,37534.6,0
+44.3,proton_web,heavy,57,20.4,19.9,4762.18,1700,41626.8,0
+52.5,proton_web,heavy,57,18.7,18.8,4758.77,1700,36302.3,0
