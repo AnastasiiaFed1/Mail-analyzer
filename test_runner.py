@@ -10,11 +10,7 @@ pyautogui.PAUSE = 0.3
 
 def run_scenario_actions(scenario: str, duration_sec: int):
     """Виконує автоклікерні дії мишею та клавіатурою в залежності від сценарію."""
-<<<<<<< HEAD
-    print(f"Стартує емуляція сценарію: '{scenario}' на {duration_sec} секунд...")
-=======
     print(f"[ PyAutoGUI] Стартує емуляція сценарію: '{scenario}' на {duration_sec} секунд...")
->>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
     
     # Очікуємо пару секунд, щоб користувач встиг активувати вікно поштовика
     time.sleep(2)
@@ -27,18 +23,18 @@ def run_scenario_actions(scenario: str, duration_sec: int):
 
         elif scenario == "medium":
             # Інтерактивний скролінг листа/списку листів
-            pyautogui.scroll(-500)  # Скрол вниз
+            pyautogui.scroll(-500)   # Скрол вниз
             time.sleep(1.5)
-            pyautogui.scroll(500)   # Скрол вгору
+            pyautogui.scroll(500)    # Скрол вгору
             time.sleep(1.5)
-            pyautogui.press("down") # Гортання клавішами
+            pyautogui.press("down")  # Гортання клавішами
             time.sleep(0.5)
             pyautogui.press("up")
             time.sleep(1.5)
 
         elif scenario == "heavy":
             # Стрес-тест: Пошук, швидкий скролінг та переключення гарячими клавішами
-            pyautogui.hotkey("ctrl", "f")  # Відкрити пошук (або Ctrl+E)
+            pyautogui.hotkey("ctrl", "f")   # Відкрити пошук (або Ctrl+E)
             time.sleep(0.5)
             pyautogui.typewrite("test report invoice urgent", interval=0.05)
             pyautogui.press("enter")
@@ -56,20 +52,16 @@ def run_scenario_actions(scenario: str, duration_sec: int):
             time.sleep(0.5)
             pyautogui.press("pageup")
             time.sleep(0.5)
-            pyautogui.press("esc")  # Скинути пошук
+            pyautogui.press("esc")   # Скинути пошук
             time.sleep(1.0)
 
-<<<<<<< HEAD
-    print(f"Емуляцію сценарію '{scenario}' завершено.")
-=======
     print(f"[ PyAutoGUI] Емуляцію сценарію '{scenario}' завершено.")
->>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
 
 
 def start_test(app_key: str, scenario: str, duration_sec: int = 60):
     """Створює паралельні потоки для одночасного збору метрик ОС та виконання дій автоклікера."""
     
-    # 1. Поток для збору метрик ОС (з файлу system_monitor.py)
+    # 1. Потік для збору метрик ОС (з файлу system_monitor.py)
     monitor_thread = threading.Thread(
         target=system_monitor.monitor_app,
         kwargs={
@@ -81,7 +73,7 @@ def start_test(app_key: str, scenario: str, duration_sec: int = 60):
         daemon=True
     )
 
-    # 2. Поток для виконання автоклікерних дій
+    # 2. Потік для виконання автоклікерних дій
     action_thread = threading.Thread(
         target=run_scenario_actions,
         kwargs={
@@ -92,11 +84,7 @@ def start_test(app_key: str, scenario: str, duration_sec: int = 60):
     )
 
     print("\n=======================================================")
-<<<<<<< HEAD
-    print(f" Старт тесту: {app_key.upper()} | Сценарій: {scenario.upper()}")
-=======
     print(f"[ TEST RUNNER] Старт тесту: {app_key.upper()} | Сценарій: {scenario.upper()}")
->>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
     print("Увага! Переключіться на вікно поштового клієнта зараз!")
     print("Початок автокліків через 5 секунд...")
     print("=======================================================\n")
@@ -113,11 +101,7 @@ def start_test(app_key: str, scenario: str, duration_sec: int = 60):
     monitor_thread.join()
     action_thread.join()
 
-<<<<<<< HEAD
-    print("\nТестування успішно завершено! Дані збережено у папку 'data/'.")
-=======
     print("\n Тестування успішно завершено! Дані збережено у папку 'data/'.")
->>>>>>> 876dbbe0a345e2fcf75ce82d6779d853223ed71e
 
 
 if __name__ == "__main__":
